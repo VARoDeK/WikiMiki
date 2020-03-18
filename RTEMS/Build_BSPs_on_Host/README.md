@@ -1,5 +1,4 @@
-
----
+RTEMS BSP Build
 
 | [Home](/README.md) | [Back](../README.md) | [Next](./1_build_sparc_bsp_in_test_mode.md) |
 | :---: | :---: | :---: |

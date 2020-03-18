@@ -1,5 +1,4 @@
-
----
+# Git
 
 | [Home](/README.md) | [Back](../ArchLinux/4_update_archlinux.md) | [Next](./1_git_cheat_sheet.md) |
 | :---: | :---: | :---: |

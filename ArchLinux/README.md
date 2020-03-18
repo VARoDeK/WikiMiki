@@ -1,5 +1,4 @@
-
----
+# Arch Linux
 
 | [Home](/README.md) | [Back](../README.md) | [Next](OS_Installation/README.md) |
 | :---: | :---: | :---: |

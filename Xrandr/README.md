@@ -1,5 +1,4 @@
-
----
+# Xrandr
 
 | [Home](/README.md) | [Back](../RTEMS/4_run_tests.md) | [Next](./1_manage_multiple_montiors.md) |
 | :---: | :---: | :---: |

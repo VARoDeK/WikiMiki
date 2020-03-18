@@ -1,5 +1,4 @@
-
----
+# Arch Linux OS Installation
 
 | [Home](/README.md) | [Back](../README.md) | [Next](./1_install_cui.md) |
 | :---: | :---: | :---: |
