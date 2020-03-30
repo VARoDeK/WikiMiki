@@ -6,7 +6,7 @@
 
 ---
 
-## Comparing counting in different base systems
+# Comparing counting in different base systems
 
 We will use:
 
@@ -103,33 +103,69 @@ This is the outcome of mathematical rule defined for number systems.
 
 2) __Base-2__ (Decimal) :
 
-   |  |  |
-   | :--- | :--- |
-   | 2<sup>0</sup> | _(1)<sub>2</sub>_ |
-   | 2<sup>1</sup> | _(10)<sub>2</sub>_ |
-   | 2<sup>2</sup> | _(100)<sub>2</sub>_ |
-   | 2<sup>3</sup> | _(1000)<sub>2</sub>_ |
-   | 2<sup>4</sup> | _(10000)<sub>2</sub>_ |
+   |  |  |  |
+   | :--- | :--- | :--- |
+   | 2<sup>0</sup> | _(1)<sub>2</sub>_ | _(1)<sub>10</sub>_ |
+   | 2<sup>1</sup> | _(10)<sub>2</sub>_ | _(2)<sub>10</sub>_ |
+   | 2<sup>2</sup> | _(100)<sub>2</sub>_ | _(4)<sub>10</sub>_ |
+   | 2<sup>3</sup> | _(1000)<sub>2</sub>_ | _(8)<sub>10</sub>_ |
+   | 2<sup>4</sup> | _(10000)<sub>2</sub>_ | _(16)<sub>10</sub>_ |
 
 3) __Base-8__ (Decimal) :
 
-   |  |  |
-   | :--- | :--- |
-   | 8<sup>0</sup> | _(1)<sub>8</sub>_ |
-   | 8<sup>1</sup> | _(10)<sub>8</sub>_ |
-   | 8<sup>2</sup> | _(100)<sub>8</sub>_ |
-   | 8<sup>3</sup> | _(1000)<sub>8</sub>_ |
-   | 8<sup>4</sup> | _(10000)<sub>8</sub>_ |
+   |  |  |  |
+   | :--- | :--- | :--- |
+   | 8<sup>0</sup> | _(1)<sub>8</sub>_ | _(1)<sub>10</sub>_ |
+   | 8<sup>1</sup> | _(10)<sub>8</sub>_ | _(8)<sub>10</sub>_ |
+   | 8<sup>2</sup> | _(100)<sub>8</sub>_ | _(64)<sub>10</sub>_ |
+   | 8<sup>3</sup> | _(1000)<sub>8</sub>_ | _(512)<sub>10</sub>_ |
+   | 8<sup>4</sup> | _(10000)<sub>8</sub>_ | _(4096)<sub>10</sub>_ |
 
 4) __Base-16__ (Decimal) :
 
+   |  |  |  |
+   | :--- | :--- | :--- |
+   | 16<sup>0</sup> | _(1)<sub>16</sub>_ | _(1)<sub>10</sub>_ |
+   | 16<sup>1</sup> | _(10)<sub>16</sub>_ | _(16)<sub>10</sub>_ |
+   | 16<sup>2</sup> | _(100)<sub>16</sub>_ | _(256)<sub>10</sub>_ |
+   | 16<sup>3</sup> | _(1000)<sub>16</sub>_ | _(4096)<sub>10</sub>_ |
+   | 16<sup>4</sup> | _(10000)<sub>16</sub>_ | _(65536)<sub>10</sub>_ |
+
+This is the outcome of mathematical rule defined for number systems.
+
+---
+
+## 4) - Multiplying a number by base/radix, in its respective base/radix number system, is equal to adding a trailing zero towards right of the number.
+
+Let's take number _(2)<sub>10</sub>_ .
+
+1) __Base-10__ (Decimal) :
+
    |  |  |
    | :--- | :--- |
-   | 16<sup>0</sup> | _(1)<sub>16</sub>_ |
-   | 16<sup>1</sup> | _(10)<sub>16</sub>_ |
-   | 16<sup>2</sup> | _(100)<sub>16</sub>_ |
-   | 16<sup>3</sup> | _(1000)<sub>16</sub>_ |
-   | 16<sup>4</sup> | _(10000)<sub>16</sub>_ |
+   | 2 x 10 | _(20)<sub>10</sub>_ |
+   | 20 x 10 | _(200)<sub>10</sub>_ |
+
+2) __Base-2__ (Decimal) :
+
+   |  |  |  |
+   | :--- | :--- | :--- |
+   | _(10)<sub>2</sub>_ x 2 | _(100)<sub>2</sub>_ | _(4)<sub>10</sub>_ |
+   | _(100)<sub>2</sub>_ x 2 | _(1000)<sub>2</sub>_ | _(8)<sub>10</sub>_ |
+
+3) __Base-8__ (Decimal) :
+
+   |  |  |  |
+   | :--- | :--- | :--- |
+   | _(2)<sub>8</sub>_ x 8 | _(20)<sub>8</sub>_ | _(16)<sub>10</sub>_ |
+   | _(20)<sub>8</sub>_ x 8 | _(200)<sub>8</sub>_ | _(128)<sub>10</sub>_ |
+
+4) __Base-16__ (Decimal) :
+
+   |  |  |  |
+   | :--- | :--- | :--- |
+   | _(2)<sub>16</sub>_ x 16 | _(20)<sub>16</sub>_ | _(32)<sub>10</sub>_ |
+   | _(20)<sub>16</sub>_ x 16 | _(200)<sub>16</sub>_ | _(512)<sub>10</sub>_ |
 
 This is the outcome of mathematical rule defined for number systems.
 
