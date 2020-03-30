@@ -44,10 +44,10 @@ Base-1 number system is the oldest and most primitive. In childhood, people are 
 
 ## Standard way to write a number in any base system?
 
-Since the most commonly used base system is decimal. Hence, any number, say 44, is considered to be written in Base-10.
+Since the most commonly used base system is decimal. Hence, any number, say 46, is considered to be written in Base-10.
 
 But the standard way to write any number _A_ with base _χ_ is: ___(A)<sub>χ</sub>___
 
-Hence, 44, in decimal, will be written in standard way as: _(46)<sub>χ</sub>_ .
+Hence, 46, in decimal, will be written in standard way as: _(46)<sub>χ</sub>_ .
 
 ---
