@@ -38,9 +38,11 @@ ch_loop:
    or al, al ; OR operation.
    jz hang   ; get out
    ; Since 'lodsb' loads a byte into 'al', if the 'Hello World' msg is read
-   ; completely, and rest program is padded with zero, the 'loadsb' will
-   ; load zero into 'al', 0|0 will be equal to zero and it also sets the
-   ; zero flag.
+   ; completely, it will then read and print 13 and 10 (See msg section) for
+   ; return carriage and newline.
+   ;
+   ; The last byte is zero, which will be read and 0|0 will be equal to zero
+   ; and it also sets the zero flag.
 
    ; 'jz' (jump if zero) will then move to next task.
 
@@ -61,7 +63,7 @@ hang:
 msg   db 'Hello World', 13, 10, 0
          ; ASCII value 13 means carriage return.
          ; ASCII value 10 means new line.
-         ; ACII value 0 means NULL, end of string.
+         ; AsCII value 0 means NULL, end of string.
  
    times 510-($-$$) db 0
          ; '$' evaluates to the assembly position at the beginning of the line
