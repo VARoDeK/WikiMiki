@@ -94,7 +94,7 @@ It will show some output. On my system the Output was:
 # VNC server running on ::1:5900
 ```
 
-Hence the output will be sent to 127.0.0.1:5900
+Hence the output will be sent to __`127.0.0.1:5900`__.
 
 __Step 2: Open Terminal 2__
 
