@@ -83,7 +83,23 @@ cp ../linux_config/config ./.config
 
 ---
 
-## Step 4 - `make`
+## Step 4 - Configure your Kernel
+
+To generate the configuration file based on the current configuration:
+
+```shell
+make oldconfig
+```
+
+To trim your Kernel more and make configuration file based on the modules loaded currently on your system:
+
+```shell
+make localmodconfig
+```
+
+---
+
+## Step 5 - `make`
 
 ```shell
 make -j$(nproc) all
@@ -91,7 +107,7 @@ make -j$(nproc) all
 
 ---
 
-## Step 5 - Install Modules
+## Step 6 - Install Modules
 
 ```shell
 sudo make modules_install
@@ -99,7 +115,7 @@ sudo make modules_install
 
 ---
 
-## Step 6 - Copy the kernel to /boot directory
+## Step 7 - Copy the kernel to /boot directory
 
 Now, If I checked the `Makefile`. The first 4 lines were:
 
@@ -126,7 +142,7 @@ sudo cp -v arch/x86_64/boot/bzImage /boot/vmlinuz-linux5_5_9
 ```
 ---
 
-## Step 7 - Make initial RAM disk
+## Step 8 - Make initial RAM disk
 
 __Make sure you have `mkinitcpio` installed.__
 
@@ -173,7 +189,7 @@ sudo mkinitcpio -p linux5_5_9
 
 ---
 
-## Step 8 - Copy System.map
+## Step 9 - Copy System.map
 
 Since, I use UEFI boot method, the boot partiiton in `FAT32`, hence doesn't support symlinks.
 
@@ -186,14 +202,14 @@ sudo cp System.map /boot/System.map
 ```
 ---
 
-## Step 9 - Configure GRUB
+## Step 10 - Configure GRUB
 
 ```shell
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ---
 
-## Step 10 - Make backup of `dmesg` for debugging and restart the system.
+## Step 11 - Make backup of `dmesg` for debugging and restart the system.
 
 ```shell
 dmesg -t > dmesg_current
