@@ -91,10 +91,16 @@ To generate the configuration file based on the current configuration:
 make oldconfig
 ```
 
-To trim your Kernel more and make configuration file based on the modules loaded currently on your system:
+Or, To trim your Kernel more and make configuration file based on the modules loaded currently on your system:
 
 ```shell
 make localmodconfig
+```
+
+Or, To select configurations manually using menu widget:
+
+```shell
+make menuconfig
 ```
 
 ---
