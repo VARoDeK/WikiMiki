@@ -110,7 +110,18 @@ This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` an
 
 ---
 
-### 11) - `$ git reset --soft HEAD~<n>`
+### 11) - `$ git send-email --cover-letter`
+To send the patch through mail and also include cover letter. For ex:
+
+```
+git send-email -1 -v4 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2 --cover-letter
+```
+
+This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` and `abcd2@xyz2`.
+
+---
+
+### 12) - `$ git reset --soft HEAD~<n>`
 To delete the previous **n** commits, but don't delete the changes made. Instead the changes are bought to staging area. For ex:
 
 ```shell
@@ -124,15 +135,3 @@ git push -f <remote-name> <branch-name>
 ```
 
 ---
-
-### 12) - `$ git send-email --cover-letter`
-To send the patch through mail and also include cover letter. For ex:
-
-```
-git send-email -1 -v4 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2 --cover-letter
-```
-
-This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` and `abcd2@xyz2`.
-
----
-
