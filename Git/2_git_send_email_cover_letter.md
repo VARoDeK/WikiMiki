@@ -8,7 +8,7 @@
 
 # Cover Letter with - `git send-email`
 
-To see how to use `git send-email`, visit [here](./1_git_cheat_sheet.md##10----git-send-email).
+To see how to use `git send-email`, visit [here](./1_git_cheat_sheet.md#10----git-send-email).
 
 ---
 
