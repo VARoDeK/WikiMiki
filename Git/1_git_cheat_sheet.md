@@ -36,7 +36,7 @@ This will fetch and merge the commits from the mentioned branch of the mentioned
 git pull varodek newBranch1
 ```
 
-This will sync you current branch with `newBranch1` branch of the remote `varodek`.
+This will sync you current branch with `newBranch1` branch of the remote `varodek` and make an additional commit concluding all the changes.
 
 ---
 
@@ -133,5 +133,26 @@ This will delete the last **2** commits of the current branch. All the chnages w
 ```shell
 git push -f <remote-name> <branch-name>
 ```
+
+---
+
+### 13) - `$ git pull --rebase <remote-name> <branch-name>`
+
+This will fetch and rebase the commits from the mentioned branch of the mentioned remote. Use it for syncing forked repository with original.
+
+Consider the case:
+1) I fork a repo.
+2) I make changes and now my fork-repo is one commit ahead of original.
+3) I create a Pull-Request, the author accepts it and an additional commit, for merging, goes on top of my commit.
+4) Now if I do `git pull origin master` in my fork-repo (origin refers to repo of original author), the commits will be fetched from origin-master and will be saved in my fork-repo with an additional commit for pull-merge. Hence, again my fork-repo is one commit ahead of original. And this loop will continue.
+5) But if I do `git pull --rebase origin master` in Step-4, the commits will be fetched from origin and will be saved in my fork-repo. No additional commit will be made for pulling changes. Thus my fork-repo got synced with original.
+
+For ex:
+
+```shell
+git pull --rebase origin master
+```
+
+This will sync you current branch with `master` branch of the remote `origin`.
 
 ---
