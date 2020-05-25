@@ -156,3 +156,15 @@ git pull --rebase origin master
 This will sync you current branch with `master` branch of the remote `origin`.
 
 ---
+
+### 14) - `$ git log --all --grep="<regex>" --no-merges --oneline`
+
+It will search git commits with regular expression. It won't show merge commits (`--no-merges`), and show commit headers only (`--oneline`).
+
+For ex:
+
+```shell
+git log --all --grep="drivers/net/ethernet/realtek" --no-merges --oneline
+```
+
+---
