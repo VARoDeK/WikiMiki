@@ -140,6 +140,8 @@ git push -f <remote-name> <branch-name>
 
 This will fetch and rebase the commits from the mentioned branch of the mentioned remote. Use it for syncing forked repository with original.
 
+Rebasing, re-applies the commits. It picks the changes made on the branch which you want to rebase, sync the branches, and then re-applies your changes on top of it.
+
 Consider the case:
 1) I fork a repo.
 2) I make changes and now my fork-repo is one commit ahead of original.
