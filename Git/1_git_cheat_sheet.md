@@ -136,11 +136,36 @@ git push -f <remote-name> <branch-name>
 
 ---
 
-### 13) - `$ git pull --rebase <remote-name> <branch-name>`
+### 13) - `$ git rebase <branch name>`
 
-This will fetch and rebase the commits from the mentioned branch of the mentioned remote. Use it for syncing forked repository with original.
+Suppose you are on branch "development". And you run:
 
-Rebasing, re-applies the commits. It picks the changes made on the branch which you want to rebase, sync the branches, and then re-applies your changes on top of it.
+```shell
+git rebase master
+```
+
+The following happens:
+
+1) - git will find common ancestor commmit of "development" and "master".
+
+2) - git will buffer the commits made on "development" since the common ancestor commit. Hene the latest commit of "development" is the ancestral common commit.
+
+3) - git will sync "master" and "development". Hence, "development" and "master" are true mirror of each other.
+
+4) - Now, git will re-apply the buffered commits on top of "development".
+
+```
+  Before rebase         After rebase
+    e-f-g development           E-F-G development
+   /                           /
+  a-b-c-d master        a-b-c-d master
+```
+
+---
+
+### 14) - `$ git pull --rebase <remote-name> <branch-name>`
+
+It will fetch the changes from upstream and rebase your local changes.
 
 Consider the case:
 1) I fork a repo.
@@ -159,7 +184,7 @@ This will sync you current branch with `master` branch of the remote `origin`.
 
 ---
 
-### 14) - `$ git log --all --grep="<regex>" --no-merges --oneline`
+### 15) - `$ git log --all --grep="<regex>" --no-merges --oneline`
 
 It will search git commits with regular expression. It won't show merge commits (`--no-merges`), and show commit headers only (`--oneline`).
 
