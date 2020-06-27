@@ -81,6 +81,8 @@ Then I copied the file.
 cp ../linux_config/config ./.config
 ```
 
+(Anytime you want to clean the repo, of config files and all, run `make mrproper`.)
+
 ---
 
 ## Step 4 - Configure your Kernel
