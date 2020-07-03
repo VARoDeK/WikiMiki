@@ -1,7 +1,7 @@
 
 ---
 
-| [Home](/README.md) | [Index](./README.md) | [Back](./1_git_cheat_sheet.md) | [Next](../Linux/README.md) |
+| [Home](/README.md) | [Index](./README.md) | [Back](./1_git_cheat_sheet.md) | [Next](./3_git_rewrite_history.md) |
 | :---: | :---: | :---: | :---: |
 
 ---
