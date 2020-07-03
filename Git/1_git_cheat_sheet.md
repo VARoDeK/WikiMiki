@@ -68,6 +68,12 @@ Consider the case, you created a new branch in local repository. But now you can
 git push --set-upstream varodek newBranch2
 ```
 
+You can also use short form : `-u`
+
+```shell
+git push -u varodek newBranch2
+```
+
 ---
 
 ### 7) - `$ git add -A`
@@ -217,6 +223,29 @@ For ex:
 
 ```shell
 git log --all --grep="drivers/net/ethernet/realtek" --no-merges --oneline
+```
+
+---
+
+### 17) - `$ git commit --amend`
+
+It is used to modify/update your previous commit.
+
+```
+  Before amend           After amend
+
+  a-b-c-d master         a-b-c-D master
+
+```
+
+Use when:
+  - want to update/add/delete/create a file in previous commit.
+  - want to update/modify commit message.
+
+Example:
+
+```shell
+git commit --amend
 ```
 
 ---
