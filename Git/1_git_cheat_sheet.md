@@ -215,14 +215,23 @@ This will sync you current branch with `master` branch of the remote `origin`.
 
 ---
 
-### 16) - `$ git log --all --grep="<regex>" --no-merges --oneline`
+### 16) - `$ git log --grep="<regex>"`
 
-It will search git commits with regular expression. It won't show merge commits (`--no-merges`), and show commit headers only (`--oneline`).
+Consider a case where I want to search some text/regular-expression in previous commits. 
+`git log --grep` will search git commits with regular expression. You can attach several flags:
 
-For ex:
+1) `--no-merges` - It won't show merge commits.
+2) `--oneline` - It will show only commit headersFor ex:
 
 ```shell
 git log --all --grep="drivers/net/ethernet/realtek" --no-merges --oneline
+```
+3) `--all` - It will search in all branches.
+
+I use:
+
+```shell
+git log --grep="<regex>" --full-diff --all --no-merges
 ```
 
 ---
