@@ -148,14 +148,8 @@ This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` an
 
 ---
 
-### 11) - `$ git send-email --cover-letter`
+### 11) - `--cover-letter`
 __Case__ : You want to send the patch through mail and also include cover letter. For ex:
-
-```shell
-git send-email -1 -v4 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2 --cover-letter
-```
-
-This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` and `abcd2@xyz2`.
 
 See brief description [here](./2_git_send_email_cover_letter.md).
 
@@ -196,9 +190,9 @@ The following happens:
 
 ```
   Before merge          After merge
-    e-f-g development     e-f-g-H development
+    e-f-g development     e-f-g-N development
    /                     /       \
-  a-b-c-d master        a-b-c-d---N master
+  a-b-c-d master        a--b--c---d master
 ```
 
 __`N`__ is the new merge commit, made.
@@ -284,7 +278,6 @@ __Case__ : You want to modify/update your previous commit.
   Before amend           After amend
 
   a-b-c-d master         a-b-c-D master
-
 ```
 
 Use when:
