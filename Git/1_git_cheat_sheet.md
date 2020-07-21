@@ -9,16 +9,16 @@
 # Git Cheat Sheet
 
 ### 1) - `$ git clone <repo-location>`
-This will clone the repository from a particular location _(location can be a URL too)_. For ex:
+__Case__ : You want to clone a repository from a particular location _(location can be a URL too)_. For ex:
 
 ```shell
-git clone https://github.com/VARoDeK/MyNotes.git
+git clone https://github.com/VARoDeK/WikiMiki.git
 ```
 
 ---
 
 ### 2) - `$ git remote add <name-of-new-remote> <remote>`
-To add a new remote. For ex:
+__Case__ : You want to add a new remote _(remote is the pointer to location)_. For ex:
 
 ```shell
 git remote add varodek https://github.com/VARoDeK/newlib.git
@@ -30,18 +30,20 @@ Here, `varodek` is the name of remote and `https://github.com/VARoDeK/newlib.git
 
 ### 3) - `$ git pull <remote-name> <branch-name>`
 
-This will fetch and merge the commits from the mentioned branch of the mentioned remote. For ex:
+__Case__ : You want to fetch and merge the commits from the mentioned branch of the mentioned remote. For ex:
 
 ```shell
 git pull varodek newBranch1
 ```
 
-This will sync you current branch with `newBranch1` branch of the remote `varodek` and make an additional commit concluding all the changes.
+This will collect changes from the mentioned branch of the mentioned remote and add them on the top of your branch in the form of a commit. The changes will but put on the top of your local changes/commits if you have any.
+
+If you want to rebase it, check [here](#15----git-pull---rebase-remote-name-branch-name).
 
 ---
 
 ### 4) - `$ git push <remote-name> <branch-name>`
-Similar to `git pull`, but this will sync the remote with your current branch. For ex:
+__Case__ : You want send your changes to the remote. This is similar to `git pull`, but this will sync the remote with your current branch. For ex:
 
 ```shell
 git push varodek newBranch1
@@ -50,7 +52,7 @@ git push varodek newBranch1
 ---
 
 ### 5) - `$ git checkout -b <branch-name>`
-This will create a new branch and make this as your current. For ex:
+__Case__ : You want to create a new branch from the HEAD of your current branch. Do:
 
 ```shell
 git checkout -b newBranch2
@@ -62,7 +64,7 @@ This will create a new branch with name `newBranch2` and now your current workin
 
 ### 6) - `$ git push --set-upstream <remote-name> <branch-name>`
 
-Consider the case, you created a new branch in local repository. But now you cannot push it, as the remote repository does not have that branch. Hence, it does not know where to push the changes. So we use `--set-upstream` flag to do required. For ex:
+__Case__ : You created a new branch in local repository. But now you cannot push it, as the remote repository does not have that branch. Hence, it does not know where to push the changes. So we use `--set-upstream` flag to do required. For ex:
 
 ```shell
 git push --set-upstream varodek newBranch2
@@ -77,7 +79,7 @@ git push -u varodek newBranch2
 ---
 
 ### 7) - `$ git add -A`
-This will add all the changes, made after latest commit, to staging area. For ex:
+__Case__ : You want to add all the changes, made after latest commit, to staging area. For ex:
 
 ```shell
 git add -A
@@ -86,7 +88,7 @@ git add -A
 ---
 
 ### 8) - `$ git checkout -f`
-After adding changes to staging area, before commiting them, if you want to delte all changes and go back to previous commit. Use this command. For ex:
+__Case__ : After adding changes to staging area, before commiting them, if you want to delete all changes and go back to previous commit. Use this command. For ex:
 
 ```shell
 git checkout -f
@@ -95,40 +97,72 @@ git checkout -f
 ---
 
 ### 9) - `$ git format-patch`
-To create patch.
+__Case__ : You want to create a patch. Then send it.
 
-```
-git fromat-patch -1
+```shell
+git fromat-patch -<N> -v<n>
 ```
 
-To Do
+1) `N` - To tell the number of commits you want to include in your Patch.
+
+2) `n` - To tell the version number of Patch. Sometime you are suggested some changes in your patches and are asked to resend it. Version numbering simplifies it.
+
+```shell
+git fromat-patch -2 -v1
+```
+
+> Here, the patch will have last 2 commits. And it is the 1st version of the patch.
+> Remeber, one patch is created per commit. Thus, 2 patch files will be created.
+
+Use `-o` flag to tell the location to save patches:
+
+```shell
+git format-patch -2 -v1 -o ~/development/PATCH/linux
+```
+
+And use this to send those patches:
+
+```shell
+git send-email --to=linux-kernel@vger.kernel.org --cc=abcd1@xyz1 --cc=abcd2@xyz2 ~/development/PATCH/linux/*.patch
+```
+
+This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` and `abcd2@xyz2`.
 
 ---
 
 ### 10) - `$ git send-email`
-To send the patch through mail. For ex:
+__Case__ : You want to create-send the patch through mail. For ex:
 
-```
-git send-email -1 -v4 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2
+```shell
+git send-email -<N> -v<n> --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2
 ```
 
+Ex:
+
+```shell
+git send-email -14 -v2 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2
+```
+
+Here, the patch will have last 4 commits. And it is the 2nd 
 This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` and `abcd2@xyz2`.
 
 ---
 
 ### 11) - `$ git send-email --cover-letter`
-To send the patch through mail and also include cover letter. For ex:
+__Case__ : You want to send the patch through mail and also include cover letter. For ex:
 
-```
+```shell
 git send-email -1 -v4 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2 --cover-letter
 ```
 
 This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` and `abcd2@xyz2`.
 
+See brief description [here](./2_git_send_email_cover_letter.md).
+
 ---
 
 ### 12) - `$ git reset --soft HEAD~<n>`
-To delete the previous **n** commits, but don't delete the changes made. Instead the changes are bought to staging area. For ex:
+__Case__ : You want to delete the previous **n** commits, but don't delete the changes made. Instead the changes are bought to staging area. For ex:
 
 ```shell
 git reset --soft HEAD~2
@@ -140,11 +174,13 @@ This will delete the last **2** commits of the current branch. All the chnages w
 git push -f <remote-name> <branch-name>
 ```
 
+Use `--hard` instead of `--soft` if you want to completely remove **n** commits.
+
 ---
 
 ### 13) - `$ git merge <branch name>`
 
-Suppose you are on branch __"development"__ . And you run:
+__Case__ : Suppose you are on branch __"development"__ . And you run:
 
 ```shell
 git merge master
@@ -159,17 +195,19 @@ The following happens:
 3) - It will put the changes on top of your branch and make an additional commit to reflect the changes.
 
 ```
-  Before rebase         After rebase
+  Before merge          After merge
     e-f-g development     e-f-g-H development
-   /                     /     /
-  a-b-c-d master        a-b-c-d master
+   /                     /       \
+  a-b-c-d master        a-b-c-d---N master
 ```
+
+__`N`__ is the new merge commit, made.
 
 ---
 
 ### 14) - `$ git rebase <branch name>`
 
-Suppose you are on branch __"development"__. And you run:
+__Case__ : Suppose you are on branch __"development"__. And you run:
 
 ```shell
 git rebase master
@@ -196,6 +234,8 @@ The following happens:
 
 ### 15) - `$ git pull --rebase <remote-name> <branch-name>`
 
+Understand [rebase](#14----git-rebase-branch-name) first.
+
 It will fetch the changes from upstream and rebase your local changes.
 
 Consider the case:
@@ -217,7 +257,7 @@ This will sync you current branch with `master` branch of the remote `origin`.
 
 ### 16) - `$ git log --grep="<regex>"`
 
-Consider a case where I want to search some text/regular-expression in previous commits. 
+__Case__ : Consider a case where you want to search some text/regular-expression in previous commits. 
 `git log --grep` will search git commits with regular expression. You can attach several flags:
 
 1) `--no-merges` - It won't show merge commits.
@@ -238,7 +278,7 @@ git log --grep="<regex>" --full-diff --all --no-merges
 
 ### 17) - `$ git commit --amend`
 
-It is used to modify/update your previous commit.
+__Case__ : You want to modify/update your previous commit.
 
 ```
   Before amend           After amend
