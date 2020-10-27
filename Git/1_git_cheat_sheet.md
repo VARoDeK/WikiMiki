@@ -140,7 +140,7 @@ git send-email -<N> -v<n> --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2
 Ex:
 
 ```shell
-git send-email -14 -v2 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2
+git send-email -4 -v2 --to=devel@rtems.org --cc=abcd1@xyz1 --cc=abcd2@xyz2
 ```
 
 Here, the patch will have last 4 commits. And it is the 2nd 
