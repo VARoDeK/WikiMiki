@@ -255,7 +255,7 @@ __Case__ : Consider a case where you want to search some text/regular-expression
 `git log --grep` will search git commits with regular expression. You can attach several flags:
 
 1) `--no-merges` - It won't show merge commits.
-2) `--oneline` - It will show only commit headersFor ex:
+2) `--oneline` - It will show only commit headers. For ex:
 
 ```shell
 git log --all --grep="drivers/net/ethernet/realtek" --no-merges --oneline
@@ -288,6 +288,32 @@ Example:
 
 ```shell
 git commit --amend
+```
+
+---
+
+### 18) - `$ git log --author=<email-ID>`
+
+__Case__ : You want to search the commits, made by a particular developer.
+
+For example, you want to search commits made by "vaibhavgupta40@gmail.com".
+
+```shell
+git log --author=vaibhavgupta40@gmail.com
+```
+
+---
+
+### 19) - `$ git log --follow -- <full-filename>`
+
+__Case__ : You want to search whole commit history of a particular file, even if the location of the file was changed, or file was renamed. In short, whatever happened with this files, it will show whole history.
+
+__Note__, the `<full-filename>` should be the last option passed to `git` after `--`.
+
+For example, you want to see the commit history of `atyfb_base.c` file in Linux Repo. It's current locations is `drivers/video/fbdev/aty/atyfb_base.c`.
+
+```shell
+git log --follow -- drivers/video/fbdev/aty/atyfb_base.c
 ```
 
 ---
