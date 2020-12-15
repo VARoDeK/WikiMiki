@@ -1,7 +1,7 @@
 
 ---
 
-| [Home](/README.md) | [Index](./README.md) | [Back](./README.md) | [Next](../Newlib/README.md) |
+| [Home](/README.md) | [Index](./README.md) | [Back](./README.md) | [Next](./2_disable_config_pm_in_linux_config_file.md) |
 | :---: | :---: | :---: | :---: |
 
 ---

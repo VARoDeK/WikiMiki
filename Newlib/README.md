@@ -1,6 +1,6 @@
 # Newlib
 
-| [Home](/README.md) | [Back](../Linux/1_clone_and_build_linux_kernel_from_source_install_or_uninstall.md) | [Next](./Build_for_Various_architectures/README.md) |
+| [Home](/README.md) | [Back](../Linux/2_disable_config_pm_in_linux_config_file.md) | [Next](./Build_for_Various_architectures/README.md) |
 | :---: | :---: | :---: |
 
 ---
