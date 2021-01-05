@@ -14,13 +14,13 @@
 ### 1) Start
 
 ```shell
-sudo systemctl start org.cups.cupsd.service
+sudo systemctl start cups.service
 ```
 
 ### 2) Stop
 
 ```shell
-sudo systemctl stop org.cups.cupsd.service
+sudo systemctl stop cups.service
 ```
 
 ---
