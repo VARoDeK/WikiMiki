@@ -317,3 +317,9 @@ git log --follow -- drivers/video/fbdev/aty/atyfb_base.c
 ```
 
 ---
+
+### 20) - `$ git log --all --full-diff --no-merges --grep=<pattern-to-search>`
+
+__Case__ : You want to search some commit on the basis of its contents/changes.
+
+---
