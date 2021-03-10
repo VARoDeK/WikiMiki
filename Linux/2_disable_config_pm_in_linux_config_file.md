@@ -1,7 +1,7 @@
 
 ---
 
-| [Home](/README.md) | [Index](./README.md) | [Back](./1_clone_and_build_linux_kernel_from_source_install_or_uninstall.md) | [Next](../Newlib/README.md) |
+| [Home](/README.md) | [Index](./README.md) | [Back](./1_clone_and_build_linux_kernel_from_source_install_or_uninstall.md) | [Next](./Share_net_to_another_system_running_linux/README.md) |
 | :---: | :---: | :---: | :---: |
 
 ---

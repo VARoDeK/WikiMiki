@@ -1,6 +1,6 @@
 # Newlib
 
-| [Home](/README.md) | [Back](../Linux/2_disable_config_pm_in_linux_config_file.md) | [Next](./Build_for_Various_architectures/README.md) |
+| [Home](/README.md) | [Back](../Linux/Share_net_to_another_system_running_linux/README.md) | [Next](./Build_for_Various_architectures/README.md) |
 | :---: | :---: | :---: |
 
 ---

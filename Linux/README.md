@@ -11,5 +11,6 @@
 | :---: | :--- |
 | 1 | [How to Clone and Build Linux Kernel From Source? Install/ Uninstall.](./1_clone_and_build_linux_kernel_from_source_install_or_uninstall.md) |
 | 2 | [Disable `CONFIG_PM` in Linux configuration file.](./2_disable_config_pm_in_linux_config_file.md) |
+| 3 | [Share Internet wil another system running Linux](./Share_net_to_another_system_running_linux/README.md) |
 
 ---
