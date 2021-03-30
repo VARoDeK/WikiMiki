@@ -1,7 +1,7 @@
 
 ---
 
-| [Home](/README.md) | [Index](./README.md) | [Back](./README.md) | [Next](../Linux/README.md) |
+| [Home](/README.md) | [Index](./README.md) | [Back](./README.md) | [Next](./2_git_send_email_cover_letter.md) |
 | :---: | :---: | :---: | :---: |
 
 ---
@@ -9,6 +9,7 @@
 # Git Cheat Sheet
 
 ### 1) - `$ git clone <repo-location>`
+
 __Case__ : You want to clone a repository from a particular location _(location can be a URL too)_. For ex:
 
 ```shell
@@ -18,6 +19,7 @@ git clone https://github.com/VARoDeK/WikiMiki.git
 ---
 
 ### 2) - `$ git remote add <name-of-new-remote> <remote>`
+
 __Case__ : You want to add a new remote _(remote is the pointer to location)_. For ex:
 
 ```shell
@@ -43,15 +45,30 @@ If you want to rebase it, check [here](#15----git-pull---rebase-remote-name-bran
 ---
 
 ### 4) - `$ git push <remote-name> <branch-name>`
+
 __Case__ : You want send your changes to the remote. This is similar to `git pull`, but this will sync the remote with your current branch. For ex:
 
 ```shell
 git push varodek newBranch1
 ```
 
+__Case__ : The repository is very big and you want push entire repository to the remote. But you get errors like:
+
+  * `fatal: The remote end hung up unexpectedly`
+  * `remote: fatal: pack exceeds maximum allowed size`
+
+In this case, you cannot send all commits in one go, you will have to break it into pieces. Use [this solution](https://github.com/git-lfs/git-lfs/issues/3758#issuecomment-519111398).
+
+```shell
+git rev-list --reverse master | ruby -ne 'i ||= 0; i += 1; puts $_ if i % 20000 == 0' | xargs -I{} git push varodek +{}:refs/heads/master
+```
+
+Thie above command will send 20000 commits at a time. You can change the value.
+
 ---
 
 ### 5) - `$ git checkout -b <branch-name>`
+
 __Case__ : You want to create a new branch from the HEAD of your current branch. Do:
 
 ```shell
@@ -79,6 +96,7 @@ git push -u varodek newBranch2
 ---
 
 ### 7) - `$ git add -A`
+
 __Case__ : You want to add all the changes, made after latest commit, to staging area. For ex:
 
 ```shell
@@ -88,6 +106,7 @@ git add -A
 ---
 
 ### 8) - `$ git checkout -f`
+
 __Case__ : After adding changes to staging area, before commiting them, if you want to delete all changes and go back to previous commit. Use this command. For ex:
 
 ```shell
@@ -97,6 +116,7 @@ git checkout -f
 ---
 
 ### 9) - `$ git format-patch`
+
 __Case__ : You want to create a patch. Then send it.
 
 ```shell
@@ -131,6 +151,7 @@ This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` an
 ---
 
 ### 10) - `$ git send-email`
+
 __Case__ : You want to create-send the patch through mail. For ex:
 
 ```shell
@@ -149,6 +170,7 @@ This will send email to `devel@rtems.org` and it will be cc'd to `abcd1@xyz1` an
 ---
 
 ### 11) - `--cover-letter`
+
 __Case__ : You want to send the patch through mail and also include cover letter. For ex:
 
 See brief description [here](./2_git_send_email_cover_letter.md).
@@ -156,6 +178,7 @@ See brief description [here](./2_git_send_email_cover_letter.md).
 ---
 
 ### 12) - `$ git reset --soft HEAD~<n>`
+
 __Case__ : You want to delete the previous **n** commits, but don't delete the changes made. Instead the changes are bought to staging area. For ex:
 
 ```shell
