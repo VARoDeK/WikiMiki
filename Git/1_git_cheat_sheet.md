@@ -117,15 +117,15 @@ git checkout -f
 
 ### 9) - `$ git format-patch`
 
-__Case__ : You want to create a patch. Then send it.
+__Case__ : You want to create a patch _(or a patch-series)_. Then send it.
 
 ```shell
 git fromat-patch -<N> -v<n>
 ```
 
-1) `N` - To tell the number of commits you want to include in your Patch.
+1) `N` - To tell the number of top-most commits you want to include in your patch-series.
 
-2) `n` - To tell the version number of Patch. Sometime you are suggested some changes in your patches and are asked to resend it. Version numbering simplifies it.
+2) `n` - To tell the version number of the patch(es). Sometime you are suggested some changes in your patches and are asked to resend it. Version numbering simplifies it.
 
 ```shell
 git fromat-patch -2 -v1
@@ -134,10 +134,20 @@ git fromat-patch -2 -v1
 > Here, the patch will have last 2 commits. And it is the 1st version of the patch.
 > Remeber, one patch is created per commit. Thus, 2 patch files will be created.
 
+__Case__ : You want to save created patches at a particular location.
+
 Use `-o` flag to tell the location to save patches:
 
 ```shell
 git format-patch -2 -v1 -o ~/development/PATCH/linux
+```
+
+__Case__ : You want to create patch-series for the changes from last x<sup>th</sup> commit to last y<sup>th</sup> commit.
+
+For example you want a patch-series from last 5<sup>th</sup> commit to last 2<sup>nd</sup> commit. Now last 2<sup>nd</sup> commit is `HEAD~1` and last 5<sup>th</sup> commit is `HEAD~4`. But we will have to use `HEAD~5` as the revision number in the left is not included in the count. Therefore, the command will be:
+
+```shell
+git format-patch HEAD~5..HEAD~1 -v1 -o ~/development/PATCH/linux
 ```
 
 And use this to send those patches:
