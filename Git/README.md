@@ -11,5 +11,6 @@
 | :---: | :--- |
 | 1 | [My Own Git Cheat Sheet](./1_git_cheat_sheet.md) |
 | 2 | [Cover letter with - `git send-email`](./2_git_send_email_cover_letter.md) |
+| 3 | [Git Rewrite History](./3_git_rewrite_history.md) |
 
 ---

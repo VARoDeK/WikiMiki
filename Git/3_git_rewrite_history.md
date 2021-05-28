@@ -8,6 +8,8 @@
 
 # Re-write History - `git rebase HEAD~<n> -i`
 
-You already you how to update/modify previous commit. But what if you wanna update a commit which is n commits behind the head?
+You already know how to update/modify previous commit. But what if you wanna update a commit which is n commits behind the head?
+
+[Git Rewrite History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
 
 ---
