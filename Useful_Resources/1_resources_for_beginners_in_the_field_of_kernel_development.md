@@ -72,3 +72,17 @@ You just need to know how to build the kernel and do testing. Other than that, k
 * [Embedded.fm](https://embedded.fm/).
 
 ---
+
+### 6) - Get in the Arena.
+
+Play with some project who has a great impact on this world.
+
+* [RTEMS](https://en.wikipedia.org/wiki/RTEMS).
+    * [Page](https://www.rtems.org/).
+    * [Development page](https://devel.rtems.org/).
+
+* [Linux](https://en.wikipedia.org/wiki/Linux).
+    * [Page](https://www.linuxfoundation.org/).
+    * [Development page](https://www.kernel.org/).
+
+---
