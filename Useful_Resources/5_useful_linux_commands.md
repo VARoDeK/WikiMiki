@@ -74,3 +74,21 @@ ffmpeg -i xyz.mp4 -ss 00:00:20 -t 00:00:40 -async 1 out.mp4
 ```
 
 ---
+
+### 6) - `$ cscope -b -q -k -R`
+
+__Case__ : You want to build a cscope database for Linux Kernel.
+
+* __-b__ : This flag tells Cscope to just build the database, and not launch the Cscope GUI.
+  
+* __-q__ : The flag causes an additional, 'inverted index' file to be created, which makes searches run much faster for large databases. 
+  
+* __-k__ : This flag sets Cscope's 'kernel' mode; it will not look in `/usr/include` for any header files that are #included in your source files (this is mainly useful when you are using Cscope with operating system and/or C library source code, as we are here).
+  
+* __-R__ : This flag tells Cscope to recurse subdirectories during search for source files.
+
+```shell
+cscope -b -q -k -R
+```
+
+---
