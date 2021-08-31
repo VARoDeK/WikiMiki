@@ -180,14 +180,14 @@ arch-chroot /mnt
 ## 3 - Time Zone
 Now find out your time zone.
 
-* Figure out your `Region` by running command: `$ ls /usr/share/zoneinfo`. It will list the region names present in the system. You need to see the region name for your location. For example, in my case, region is 'Asia'.
-* Once you have got 'Region' you can figure out your `city` by running command: `$ ls /usr/share/zoneinfo/Region`. For example, I will run the command, `$ ls /usr/share/zoneinfo/Asia`.
+* Figure out your `Zone` by running command: `$ ls /usr/share/zoneinfo`. It will list the zone names present in the system. You need to see the zone name for your location. For example, in my case, region is 'Asia'.
+* Once you have got 'Zone' you can figure out your `SubZone` (if it is available) by running command: `$ ls /usr/share/zoneinfo/Region`. For example, I will run the command, `$ ls /usr/share/zoneinfo/Asia`.
 * Hence my Region is Asia and City is Kolkata.
 
 Run the command:
 
 ```shell
-ln -sf /usr/share/zoneinfo/Asia/Kolkata
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 ```
 
 Run `hwclock` to generate `/etc/adjtime`
