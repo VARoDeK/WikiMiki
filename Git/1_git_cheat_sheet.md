@@ -89,6 +89,12 @@ git checkout -b newBranch2
 
 This will create a new branch with name `newBranch2` and now your current working branch will be `newBranch2`.
 
+__Case__ : You want to create a new branch for a tag. In-short, there is a tag in your tree, you want to create a new branch with tag being the head.
+
+```shell
+git checkout tags/v5.10.65-rt53-rebase -b new_branch
+```
+
 ---
 
 ### 6) - `$ git push --set-upstream <remote-name> <branch-name>`
