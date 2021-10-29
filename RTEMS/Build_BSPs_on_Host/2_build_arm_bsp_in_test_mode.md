@@ -80,6 +80,6 @@ cd xilinx_zynq_a9_qemu
 make -j 2
 ```
 
-You don't really to install the BSP for development. But if you want to, run `$ make install`.
+You don't really need to install the BSP for development. But if you want to, run `$ make install`.
 
 ---

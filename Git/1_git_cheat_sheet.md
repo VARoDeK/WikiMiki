@@ -16,6 +16,18 @@ __Case__ : You want to clone a repository from a particular location _(location 
 git clone https://github.com/VARoDeK/WikiMiki.git
 ```
 
+__Case__ : You want clone only latest version. i.e. You don't want a full commit history, just the latest code. It is known as shallow repository.
+
+```shell
+git clone --depth 1 https://github.com/VARoDeK/WikiMiki.git
+```
+
+__Case__ : You want to clone a shallow repositoy at specific branch/tag.
+
+```shell
+git clone --depth 1 -b v5.10.65-rt53-rebase git://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-stable-rt.git
+```
+
 ---
 
 ### 2) - `$ git remote add <name-of-new-remote> <remote>`
