@@ -374,3 +374,29 @@ git log --follow -- drivers/video/fbdev/aty/atyfb_base.c
 __Case__ : You want to search some commit on the basis of its contents/changes.
 
 ---
+
+### 21) - `git log --no-merges -S<string> {`
+
+__Case__ : I want a list of all commits where the given `<string>` was mentioned in the diff.
+
+For example, I want to see the changes made to definition of `struct timeval` (if it is moved between files). The structure definitions are of the form `struct <structure-name> {` in the linux kernel source code. Thus, every commit where the string `struct timeval {` is present in the diff, is of my help.
+
+```shell
+git log --no-merges -Sstruct\ timeval\ {
+```
+
+__Note__, I know the same could be achieved with `git blame`, but this example is just to show the use-case.
+
+---
+
+### 22) - `git log --no-merges -L :<funcname>:<file>`
+
+__Case__ : You want to see a list commits that modified a particular function (`<funcname>`) in a particular file (`<file>`).
+
+For example, I want to see all the changes made to function `readl` in `include/asm-generic/io.h`
+
+```shell
+git log --no-merges -L :readl:include/asm-generic/io.h
+```
+
+---
