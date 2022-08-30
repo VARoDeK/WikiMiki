@@ -391,12 +391,36 @@ __Note__, I know the same could be achieved with `git blame`, but this example i
 
 ### 22) - `git log --no-merges -L :<funcname>:<file>`
 
-__Case__ : You want to see a list commits that modified a particular function (`<funcname>`) in a particular file (`<file>`).
+__Case__ : You want to see the list commits that modified a particular function (`<funcname>`) in a particular file (`<file>`).
 
 For example, I want to see all the changes made to function `readl` in `include/asm-generic/io.h`
 
 ```shell
 git log --no-merges -L :readl:include/asm-generic/io.h
+```
+
+---
+
+### 23) - `git log --no-merges -L x,y:<file>`
+
+__Case__ : You want to see the list of commits that modified the contents between line number x and line number y, in a particular file.
+
+For example, I want to see all the changes made between line number 10 and 25 in `include/linux/timer.h`.
+
+```shell
+git log --no-merges -L 10,25:include/linux/timer.h
+```
+
+---
+
+### 24) - `git diff <branch1/commit1/tag1> <branch2/commit2/tag2> -- <filename>`
+
+__Case__ : You want to see the changes done to a file between two commits, or branches, or tags.
+
+For example, I want to see all the changes made to Makefile between v5.10 and v4.9
+
+```shell
+git diff v5.10 v4.9 Makefile
 ```
 
 ---
