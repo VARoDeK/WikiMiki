@@ -1,7 +1,7 @@
 
 ---
 
-| [Home](/README.md) | [Index](./README.md) | [Back](./4_google_summer_of_code.md) | [Next]() |
+| [Home](/README.md) | [Index](./README.md) | [Back](./4_google_summer_of_code.md) | [Next](./6_xargs_cheat_sheet.md) |
 | :---: | :---: | :---: | :---: |
 
 ---
