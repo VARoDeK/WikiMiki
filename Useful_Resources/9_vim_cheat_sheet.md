@@ -76,22 +76,37 @@ In normal mode:
 
 ### 4) - Search and replace.
 
-__Case__: Search and replace first occurrence. In `Command` mode:
+__Case 1__: Search and replace first occurrence. In `Command` mode:
 
 ```vim
 :s/<regex-to-be-replaced>/<regex-to-replace-with>
 ```
 
-__Case__: Search and replace first occurrence in each line in whole file. In `Command` mode:
+__Case 2__: Search and replace first occurrence in each line in whole file. (_Note: In `Command` mode, `%` means across all the lines. Or in simple words, the scope is set to all the lines._). In `Command` mode:
 
 ```vim
 :%s/<regex-to-be-replaced>/<regex-to-replace-with>
 ```
 
-__Case__: Search and replace all the occurrences. In `Command` mode:
+__Case 3__: Search and replace all the occurrences. In `Command` mode:
 
 ```vim
 :%s/<regex-to-be-replaced>/<regex-to-replace-with>/g
+```
+
+__Case 4__: In any of the __Case 1__, or __Case 2__, or __Case 3__, if you want Vim to get a confirmation from you before replacing, add `c` at the end. Thus, Vim will stop at everyinstance and will ask for your confirmation. You will see something like [`replace with <regex-to-replace-with> (y/n/a/q/l/^E/^Y)?`] at the bottom of screen.
+
+- `y` - for yes.
+- `n` - for no.
+
+In `Command` mode:
+
+```vim
+:s/<regex-to-be-replaced>/<regex-to-replace-with>/c
+
+:%s/<regex-to-be-replaced>/<regex-to-replace-with>/c
+
+:%s/<regex-to-be-replaced>/<regex-to-replace-with>/gc
 ```
 
 ---
@@ -113,7 +128,9 @@ __Case__: Delete 'n' lines from current. (Current line + 'n-1' following lines).
 :d <n>
 ```
 
-__Case__: Delete all lines in an entire file. In `Command` mode.
+__Case__: Delete all lines in an entire file. (_Note: In `Command` mode, `%` means across all the lines. Or in simple words, the scope is set to all the lines._).
+
+In `Command` mode.
 
 ```vim
 :%d
