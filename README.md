@@ -32,7 +32,8 @@ I have no intention to copy the content of any site or copy the work of any othe
 | 10 | [Xrandr](./Xrandr/README.md) |
 | 11 | [Bootable Programs](./Bootable_Programs/README.md) |
 | 12 | [Base (Mathematics)](./Base_Mathematics/README.md) |
-| 13 | [Useful Resources](./Useful_Resources/README.md) |
+| 13 | [Binary (Mathematics)](./Binary_Mathematics/README.md) |
+| 14 | [Useful Resources](./Useful_Resources/README.md) |
 
 ---
 

@@ -1,6 +1,6 @@
 # Useful Resources
 
-| [Home](/README.md) | [Back](/Base_Mathematics/3_comparing_counting_in_different_base_systems.md) | [Next](./1_resources_for_beginners_in_the_field_of_kernel_development.md) |
+| [Home](/README.md) | [Back](/Binary_Mathematics/1_Binary_numbers.md) | [Next](./1_resources_for_beginners_in_the_field_of_kernel_development.md) |
 | :---: | :---: | :---: |
 
 ---

@@ -12,5 +12,6 @@
 | 1 | [Base/Radix Numbersystem](./1_Base_Maths.md) |
 | 2 | [How Counting Works?](./2_How_Counting_Works.md) |
 | 3 | [Comparing counting in different base systems](./3_comparing_counting_in_different_base_systems.md) |
+| 4 | [Convert from one base to another](./4_Base_Conversions.md) |
 
 ---
