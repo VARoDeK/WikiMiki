@@ -10,5 +10,6 @@
 | S.No. | Name |
 | :---: | :--- |
 | 1 | [Binary Numbersystem](./1_Binary_numbers.md) |
+| 4 | [Negative numbers in the Binary world](./4_Negative_numbers_in_binary.md) |
 
 ---

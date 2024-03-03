@@ -1,6 +1,6 @@
 # Useful Resources
 
-| [Home](/README.md) | [Back](/Binary_Mathematics/1_Binary_numbers.md) | [Next](./1_resources_for_beginners_in_the_field_of_kernel_development.md) |
+| [Home](/README.md) | [Back](/Binary_Mathematics/6_Shift_operations.md) | [Next](./1_resources_for_beginners_in_the_field_of_kernel_development.md) |
 | :---: | :---: | :---: |
 
 ---
