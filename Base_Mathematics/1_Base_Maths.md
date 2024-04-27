@@ -34,8 +34,6 @@ Base-1 number system is the oldest and most primitive. In childhood, people are 
 
 * __Base-2__ (Binary) means we can count 2 objects using unique digits and/or letters.
 
-* __Base-2__ (Binary) means we can count 2 objects using unique digits and/or letters.
-
 * __Base-8__ (Octal) means we can count 8 objects using unique digits and/or letters.
 
 * __Base-16__ (Hexadecimal) means we can count 16 objects using unique digits and/or letters.
@@ -48,6 +46,6 @@ Since the most commonly used base system is decimal. Hence, any number, say 46, 
 
 But the standard way to write any number _A_ with base _χ_ is: ___(A)<sub>χ</sub>___
 
-Hence, 46, in decimal, will be written in standard way as: _(46)<sub>χ</sub>_ .
+Hence, 46, in decimal, will be written in standard way as: _(46)<sub>10</sub>_ .
 
 ---
